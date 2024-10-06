@@ -19,7 +19,8 @@ header {
 
 h1 {
     color: #333;
-    margin: 25px; /
+    margin: 25px; 
+    font-family: "Bungee Shade", sans-serif;
 }
 
 /* Estilos del main */
