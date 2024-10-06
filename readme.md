@@ -2,38 +2,50 @@
 
 Este es un simple programa en JavaScript que solicita al usuario dos números, luego calcula y muestra la suma y la resta de esos dos números.
 
-## ¿Cómo funciona?
-
-1. El programa pide al usuario que ingrese dos números a través de la función `prompt()`.
-2. Los valores ingresados son convertidos a números con `parseFloat()`.
-3. Se realizan dos operaciones:
-   - **Suma:** Se suman ambos números.
-   - **Resta:** Se resta el segundo número al primero.
-4. Los resultados se muestran al usuario en la consola con `console.log()` y también a través de ventanas emergentes (`alert()`).
+El archivo JavaScript contiene:
+- Una función llamada `aceptar()` que se ejecuta al hacer clic en el botón.
+- Dentro de esta función:
+  - Se obtienen los valores de los campos de entrada.
+  - Se validan los valores ingresados para asegurarse de que sean números.
+  - Se realiza la operación de suma o resta según lo que el usuario haya ingresado.
+  - Se muestra el resultado en la página.
 
 ## Ejecución del programa
 
-Para ejecutar el programa:
-
-1. Abre el archivo `.html` que contenga el script JavaScript.
-2. El navegador te pedirá que introduzcas dos números.
-3. Una vez introducidos, verás los resultados tanto en la consola del navegador como en una alerta emergente.
+1. Descarga los archivos `index.html` y `javas.js`.
+2. Abre el archivo `index.html` en un navegador web.
+3. Introduce dos números en los campos de texto.
+4. Especifica la operación escribiendo "suma" o "resta" en el campo de texto correspondiente.
+5. Haz clic en el botón "Enter".
+6. El resultado se mostrará en la página.
 
 ## Ejemplo de código
 
 ```javascript
-// Solicitar dos números al usuario
-let num1 = parseFloat(prompt("Introduce el primer número:"));
-let num2 = parseFloat(prompt("Introduce el segundo número:"));
+function aceptar() {
+    // Obtener los valores de los inputs
+    let num1 = parseFloat(document.getElementById('firtNumber').value);
+    let num2 = parseFloat(document.getElementById('secondNumber').value);
+    let operation = document.getElementById('operation').value.toLowerCase();
 
-// Calcular la suma y la resta
-let suma = num1 + num2;
-let resta = num1 - num2;
+    let resultado;
 
-// Mostrar los resultados en la consola
-console.log("La suma de " + num1 + " y " + num2 + " es: " + suma);
-console.log("La resta de " + num1 + " menos " + num2 es: " + resta);
+    // Verificar si los valores ingresados son números válidos
+    if (isNaN(num1) || isNaN(num2)) {
+        alert("Por favor, ingresa números válidos.");
+        return;
+    }
 
-// Mostrar los resultados en ventanas emergentes
-alert("La suma de " + num1 + " y " + num2 + " es: " + suma);
-alert("La resta de " + num1 + " menos " + num2 + " es: " + resta);
+    // Realizar la operación según lo indicado
+    if (operation === "suma") {
+        resultado = num1 + num2;
+    } else if (operation === "resta") {
+        resultado = num1 - num2;
+    } else {
+        alert("Por favor, ingresa una operación válida (Suma o Resta).");
+        return;
+    }
+
+    // Mostrar el resultado
+    document.getElementById('resultado').textContent = resultado;
+}

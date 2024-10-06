@@ -1,0 +1,81 @@
+/* Estilos body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilos del header y el h1 */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+    margin: 25px; /
+}
+
+/* Estilos del main */
+main {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    margin: 0 auto; /* Asegura que esté centrado */
+}
+
+/* Estilos de los labels */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Estilos de los inputs */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Estilos del botón */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos del resultado */
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Estilos del texto de resultado */
+#resultado {
+    color: #28a745;
+}
